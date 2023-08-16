@@ -15,4 +15,4 @@ NUMBER4=$2
 
 SUM=$((NUMBER3+NUMBER4))
 
-echo "sum of 2 numbers is $SUM"
+echo "sum of 2 numbers is from command line is$SUM"
