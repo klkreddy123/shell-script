@@ -1,9 +1,11 @@
 #!/bin/bash
 
-echo  "pelase enter username"
-read USERNAME # 
+# read --help
+
+echo  "please enter username"
+read -s USERNAME # 
 echo "entered username is $USERNAME"
 
-echo  "pelase enter password"
-read password # 
+echo  "please enter password"
+read -s password # 
 echo "entered password is $password"
