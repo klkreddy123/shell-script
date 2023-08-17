@@ -11,7 +11,7 @@ else
     echo "INFO:: logged in user is root user"
 fi
 
-yum install myaql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then
