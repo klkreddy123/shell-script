@@ -9,6 +9,9 @@ else
     echo "user is root user"
 fi
 yum install mysql -y
+VALIDATE $?
+yum install git -y
+VALIDATE $?
 VALIDATE()
 {
 #$1 will receive the first argument
@@ -19,3 +22,4 @@ else
     echo "Installation is sucess"
 fi    
 }
+
