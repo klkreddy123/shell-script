@@ -9,11 +9,13 @@ else
     echo "user is root user"
 fi
 yum install mysql -y
-VALIDATE(){
+VALIDATE()
+{
 #$1 will receive the first argument
 if [ $? -ne 0 ]
 then
     echo "Installation is failure"
 else
     echo "Installation is sucess"
+fi    
 }
