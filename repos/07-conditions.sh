@@ -4,8 +4,6 @@
 
 NUMBER=$1
 
-echo"Enter a number:"
-
 if [ $NUMBER -ge 10 ]
 then 
   echo"$NUMBER is greater than 10"
