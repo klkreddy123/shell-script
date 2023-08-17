@@ -6,7 +6,7 @@ NUMBER=$1
 
 echo"Enter a number:"
 
-if(NUMBER >10)
+if [ NUMBER >10 ]
   echo"NUMBER is greater than 10"
 else
    echo" NUMBER is lesser than 10"
