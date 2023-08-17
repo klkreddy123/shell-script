@@ -6,5 +6,5 @@ if [ $USERID -ne 0 ]
 then
     echo "change to root user"
 else
-    echo "user is not root user"
+    echo "user is root user"
 fi
