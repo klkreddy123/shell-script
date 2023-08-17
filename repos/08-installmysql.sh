@@ -10,3 +10,14 @@ then
 else
     echo "INFO:: logged in user is root user"
 fi
+
+yum install myaql -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation of my sql is not sucess"
+    exit 1
+else
+    echo "Installation of my sql is sucess"
+fi
+
