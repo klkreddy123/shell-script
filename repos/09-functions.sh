@@ -8,10 +8,11 @@ then
 else
     echo "user is root user"
 fi
-yum install mysql -y
+yum install postfix -y
 VALIDATE $?
-yum install git -y
+yum install sql -y
 VALIDATE $?
+
 VALIDATE()
 {
 #$1 will receive the first argument
