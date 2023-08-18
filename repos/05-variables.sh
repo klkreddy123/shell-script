@@ -1,5 +1,4 @@
 #/bin/bash
-
 #enter user name and password from console
 
 echo "enter username"

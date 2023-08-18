@@ -13,6 +13,8 @@ echo "******************************************"
 
 NUMBER1=$1
 NUMBER2=$2
+echo " entered number is $NUMBER1 "
+echo " entered number is $NUMBER2 "
 
 SUM=$((NUMBER1+NUMBER2))
 
