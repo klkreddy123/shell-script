@@ -6,6 +6,7 @@ USERID=$(id -u)
 if [$USERID -ne 0 ]
 then
     echo "logged in user is not root user"
+    exit 1
 else
     echo "logged in user is root user"
 fi    
