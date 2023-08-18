@@ -1,7 +1,11 @@
 #!bin/bash
 echo " Hello World"
 
-echo " Suresh: How are you Rakesh?"
-echo " Rakesh: How are you Suresh?"
-echo " Suresh: I am fine Rakesh"
-echo " Rakesh: I am fine Suresh"
+echo "***************************************"
+
+PERSON1=Suresh
+PERSON2=Rakesh
+echo " $(PERSON1): How are you $(PERSON2)?"
+echo " $(PERSON2): How are you $(PERSON1)?"
+echo " $(PERSON1): I am fine $(PERSON2)"
+echo " $(PERSON2): I am fine $(PERSON1)"
