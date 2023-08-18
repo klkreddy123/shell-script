@@ -1,13 +1,30 @@
 #!/bin/bash
+#install mysql & posddtfix packages
 
-# our program goal is to install my sql
 USERID=$(id -u)
 
-if [$USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo "logged in user is not root user"
+    echo "user is not root user"
     exit 1
 else
-    echo "logged in user is root user"
-fi    
+    echo "user is root user"
+fi
+
+yum install posddtfix -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation is failure"
+else
+    echo "Installation is sucessful"
+fi
+
 yum install mysql -y
+
+if [ $? -ne 0 ]
+then
+    echo "Installation is failure"
+else
+    echo "Installation is sucessful"
+fi
