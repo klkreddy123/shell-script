@@ -1,8 +1,5 @@
 #!/bin/bash
 
-PERSONS=("RAMESH" "SURESH" "SACHIN")
-
-echo "first person is: ${PERSONS[0]}"
-
-echo "All persons are: ${PERSONS[@]}"
+MARKS=(10,20,30,40,50)
+echo "first subject marks: $MARKS[0]"
 
