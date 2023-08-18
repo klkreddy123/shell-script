@@ -29,6 +29,4 @@ VALIDATE $?
 
 sudo yum install postfix -y
 
-if [ $? -ne 0 ]
-
 VALIDATE $?
