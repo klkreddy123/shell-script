@@ -2,17 +2,9 @@
 
 # Adding 2 numbers to get sum
 
-NUMBER1=1
-NUMBER2=2
+NUMBER1=2
+NUMBER2=4
 
-SUM=$((NUMBER1+NUMBER2))
+SUM=((NUMBER1+NUMBER2))
 
-echo "sum of 2 numbers is $SUM"
-
-
-NUMBER3=$1
-NUMBER4=$2
-
-SUM=$((NUMBER3+NUMBER4))
-
-echo "sum of 2 numbers is from command line is$SUM"
+echo " sum is: $sum"
