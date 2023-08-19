@@ -14,17 +14,17 @@ then
     echo -e "$2 is $RED failure $NOCOLOR"
     exit 1
 else
-    echo "$2 is $GREEN success $NOCOLOR"
+    echo -e "$2 is $GREEN success $NOCOLOR"
 fi
 
 }
 
 if [ $USERID -ne 0 ]
 then
-    echo "$RED Failure: Logged in user is not root user $NOCOLOR"
+    echo -e "$RED Failure: Logged in user is not root user $NOCOLOR"
     exit 1
 else
-    echo "$GREEN SucCess: Logged in user is root user $NOCOLOR"
+    echo -e "$GREEN SucCess: Logged in user is root user $NOCOLOR"
 fi
 
 sudo yum install mysql -y
