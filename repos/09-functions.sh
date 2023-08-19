@@ -21,7 +21,7 @@ else
     echo "Installation of my sql is success"
 fi
 
-sudo yum install postfix -y
+sudo yum install postfixe -y
 
 if [ $? -ne 0 ]
 then
