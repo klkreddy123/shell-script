@@ -15,19 +15,19 @@ sudo yum install mysql -y
 
 if [ $? -ne 0 ]
 then
-    echo "Installtion of my sql is success"
+    echo "Installtion of my sql is failure"
     exit 1
 else
-    echo "Installatio of my sql is faliure"
+    echo "Installation of my sql is success"
 fi
 
 sudo yum install postfix -y
 
 if [ $? -ne 0 ]
 then
-    echo "Installtion of my postfix is success"
+    echo "Installtion of my postfix is failure"
     exit 1
 else
-    echo "Installatio of my postfix is faliure"
+    echo "Installation of my postfix is success"
 fi
 
