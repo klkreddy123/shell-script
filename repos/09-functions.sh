@@ -27,14 +27,6 @@ sudo yum install mysql -y
 
 VALIDATE $? "Installing mysql"
 
-if [ $? -ne 0 ]
-then
-    echo "Installtion of my sql is failure"
-    exit 1
-else
-    echo "Installation of my sql is success"
-fi
-
 sudo yum install postfix -y
 
 VALIDATE $? "Installing postfix"
