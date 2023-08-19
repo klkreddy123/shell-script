@@ -26,7 +26,7 @@ then
     echo -e "$RED Failure: Logged in user is not root user $NOCOLOR"
     exit 1
 else
-    echo -e "$GREEN SucCess: Logged in user is root user $NOCOLOR"
+    echo -e "$GREEN Success: Logged in user is root user $NOCOLOR"
 fi
 
 sudo yum install mysql -y &>>$LOGFILE
