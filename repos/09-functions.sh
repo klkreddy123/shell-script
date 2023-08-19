@@ -1,7 +1,7 @@
 #!/bin/bash
 #Program to install mysql and postfix
 
-USER=$(id -u)
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
