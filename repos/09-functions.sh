@@ -1,32 +1,33 @@
 #!/bin/bash
-#install mysql & postfix packages
+#Program to install mysql and postfix
 
-USERID=$(id -u)
-
-VALIDATE()
-{
-    if [ $1 -ne 0 ]
-    then
-        echo "$2 Installation is failed"
-        exit 1
-    else
-        echo "$2 Installation is successful"
-    fi
-}
-
+USER=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo "User is not root user"
+    echo "Failure: Logged in user is not root user"
     exit 1
 else
-    echo "User is root user"
+    echo "Sucess: Logged in user is root user"
 fi
 
 sudo yum install mysql -y
 
-VALIDATE $? " installing mysql"
+if [ $? -ne 0 ]
+then
+    echo "Installtion of my sql is success"
+    exit 1
+else
+    echo "Installatio of my sql is faliure"
+fi
 
 sudo yum install postfix -y
 
-VALIDATE $? " Installing postfix"
+if [ $? -ne 0 ]
+then
+    echo "Installtion of my postfix is success"
+    exit 1
+else
+    echo "Installatio of my postfix is faliure"
+fi
+
