@@ -2,7 +2,9 @@
 #Program to install mysql and postfix
 
 USERID=$(id -u)
-
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 RED="\e[31m"
 NOCOLOR="\e[0m"
 GREEN="\e[32m"
@@ -27,10 +29,10 @@ else
     echo -e "$GREEN SucCess: Logged in user is root user $NOCOLOR"
 fi
 
-sudo yum install mysql -y
+sudo yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "Installing mysql"
 
-sudo yum install postfix -y
+sudo yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "Installing postfix"
