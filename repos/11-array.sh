@@ -26,7 +26,7 @@ fi
 for i in $@
 do
     sudo yum install $i -y &>>$LOGFILE
-    if [$? -ne 0 ]
+    if [ $? -ne 0 ]
     then
         echo -e "$R Installed $i package is failed$NC"
     else
