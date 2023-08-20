@@ -10,6 +10,11 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 NC="\e[0m"
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGSDIR=/home/centos/shellscript-logs
+LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
+
 if [ $USERID -ne 0 ]
 then
     echo -e "$R Fail... Logged in user is not root user $NC"
@@ -20,6 +25,6 @@ fi
 
 for i in $@
 do
-    sudo yum install $i -y
+    sudo yum install $i -y &>> LOGFILE
     echo" Installing $i"
 done
