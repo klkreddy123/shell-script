@@ -12,10 +12,10 @@ G="\e[32m"
 NC="\e[0m"
 if [ $USERID -ne 0 ]
 then
-    echo "$R Fail... Logged in user is not root user $NC"
+    echo -e "$R Fail... Logged in user is not root user $NC"
     exit 1
 else
-    echo "$G Success-- Logged in user is root user $NC"
+    echo -e "$G Success-- Logged in user is root user $NC"
 fi
 
 for i in $@
