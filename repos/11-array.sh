@@ -7,13 +7,15 @@
 # if installed just print package is alredy installed, it should not run install command
 
 USERID=$(id -u)
-
+R="\e[31m"
+G="\e[32m"
+NC="\e[0m"
 if [ $USERID -ne 0 ]
 then
-    echo "Fail... Logged in user is not root user"
+    echo "$R Fail... Logged in user is not root user $NC"
     exit 1
 else
-    echo " Success-- Logged in user is root user"
+    echo "$G Success-- Logged in user is root user $NC"
 fi
 
 for i in $@
