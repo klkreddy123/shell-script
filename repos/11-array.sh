@@ -31,4 +31,5 @@ do
         echo "Installed $i package is failed"
     else
         echo "Installed $i package is success"
+    fi    
 done
