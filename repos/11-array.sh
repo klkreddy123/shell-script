@@ -15,6 +15,16 @@ SCRIPT_NAME=$0
 LOGSDIR=/home/centos/shellscript-logs
 LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
+VALIDATE()
+{
+    if [ $? -ne 0 ]
+    then
+        echo -e "$R Installed $2 package is failed$NC"
+    else
+        echo -e "$G Installed $2 package is success$NC"
+    fi  
+}
+
 if [ $USERID -ne 0 ]
 then
     echo -e "$R Fail... Logged in user is not root user $NC"
@@ -26,10 +36,5 @@ fi
 for i in $@
 do
     sudo yum install $i -y &>>$LOGFILE
-    if [ $? -ne 0 ]
-    then
-        echo -e "$R Installed $i package is failed$NC"
-    else
-        echo -e "$G Installed $i package is success$NC"
-    fi    
+    VALIDATE $? "$i"   
 done
