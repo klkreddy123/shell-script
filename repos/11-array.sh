@@ -28,8 +28,8 @@ do
     sudo yum install $i -y &>>$LOGFILE
     if [$? -ne 0 ]
     then
-        echo "$R Installed $i package is failed$NC"
+        echo -e "$R Installed $i package is failed$NC"
     else
-        echo "$G Installed $i package is success$NC"
+        echo -e "$G Installed $i package is success$NC"
     fi    
 done
