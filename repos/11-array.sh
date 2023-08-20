@@ -42,5 +42,6 @@ do
         sudo yum install $i -y &>>$LOGFILE
         VALIDATE $? "$i"
     else
-        echo "$G $i is already installed $NC"   
+        echo "$G $i is already installed $NC"
+    fi       
 done
