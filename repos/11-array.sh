@@ -26,5 +26,9 @@ fi
 for i in $@
 do
     sudo yum install $i -y &>>$LOGFILE
-    echo" Installing $i"
+    if [$? -ne 0 ]
+    then
+        echo "Installed $i package is failed"
+    else
+        echo "Installed $i package is success"
 done
