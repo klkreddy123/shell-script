@@ -6,7 +6,9 @@
 # your script should check package is already installed or not, if already installed print yellow color
 # if installed just print package is alredy installed, it should not run install command
 
-if [ $? -ne 0 ]
+USERID=$(id -u)
+
+if [ $USERID -ne 0 ]
 then
     echo "Fail... Logged in user is not root user"
     exit 1
