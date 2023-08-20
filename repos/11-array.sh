@@ -25,6 +25,6 @@ fi
 
 for i in $@
 do
-    sudo yum install $i -y &>>LOGFILE
+    sudo yum install $i -y &>>$LOGFILE
     echo" Installing $i"
 done
