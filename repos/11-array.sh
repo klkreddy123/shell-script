@@ -35,6 +35,12 @@ fi
 
 for i in $@
 do
-    sudo yum install $i -y &>>$LOGFILE
-    VALIDATE $? "$i"   
+    sudo yum list installed $i >>$LOGFILE
+    if [ $? -ne 0 ]
+    then
+        echo "$i is not installed, lets install it"
+        sudo yum install $i -y &>>$LOGFILE
+        VALIDATE $? "$i"
+    else
+        echo "$i is already installed"   
 done
