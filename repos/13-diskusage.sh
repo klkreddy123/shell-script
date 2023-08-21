@@ -15,7 +15,7 @@ DISK_USAGE_THRESHORLD=1
 message=""
 
 #IFS means internal field separator
-while IFS=read line
+while IFS= read line
 do
     #echo "output: $line"
     #this command will give usage in no format for comparision
